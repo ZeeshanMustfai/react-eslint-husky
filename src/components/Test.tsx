@@ -1,5 +1,3 @@
-const Test = () => {
-  return <div>React Boiler Plate is Reading</div>
-}
+const Test = () => <div>React Boiler Plate is Reading</div>
 
 export default Test

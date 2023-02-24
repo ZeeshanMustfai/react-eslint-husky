@@ -17,7 +17,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['prettier', '@typescript-eslint', 'prefer-arrow'],
   rules: {
     'react-hooks/exhaustive-deps': 'error',
     'react/react-in-jsx-scope': 'off',
@@ -35,6 +35,16 @@ module.exports = {
         printWidth: 160,
         tabWidth: 2,
         endOfLine: 'auto',
+      },
+    ],
+    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
+    'arrow-body-style': ['error', 'as-needed'],
+    'prefer-arrow/prefer-arrow-functions': [
+      'warn',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
       },
     ],
   },
